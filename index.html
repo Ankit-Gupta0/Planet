@@ -1,52 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Know Your Weigh</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header class="container">
-        <h1 class="heading">Calculate a weight of an object on a planet</h1>
-        <form class="inp">
-            <input type="number" id="mass" size="40" placeholder="Mass in Kilogram"/>
-            <select id="selectedPlanet"">
-                <option value="none" class="opt">--select planet--</option>
-                <option value="mercury" class="opt">MERCURY</option>
-                <option value="venus" class="opt">VENUS</option>
-                <option value="earth" class="opt">EARTH</option>
-                <option value="moon" class="opt">MOON</option>
-                <option value="mars" class="opt">MARS</option>
-                <option value="jupiter" class="opt">JUPITER</option>
-                <option value="saturn" class="opt">SATURN</option>
-                <option value="uranus" class="opt">URANUS</option>
-                <option value="neptune" class="opt">NEPTUNE</option>
-                <option value="pluto" class="opt">PLUTO</option>
-            </select>
-            <button type="button" class="btn" id="calculate">Calculate weight</button>
-        </form>
-
+      <h1 class="heading">Calculate a weight of an object on a planet</h1>
+      <div class="inp">
+        <input
+          type="number"
+          id="mass"
+          size="40"
+          placeholder="Mass in Kilogram"
+        />
+        <select id="selectedPlanet" onchange="changeImg()">
+          <option value="earth" class="opt">EARTH</option>
+          <option value="mercury" class="opt">MERCURY</option>
+          <option value="venus" class="opt">VENUS</option>
+          <option value="moon" class="opt">MOON</option>
+          <option value="mars" class="opt">MARS</option>
+          <option value="jupiter" class="opt">JUPITER</option>
+          <option value="saturn" class="opt">SATURN</option>
+          <option value="uranus" class="opt">URANUS</option>
+          <option value="neptune" class="opt">NEPTUNE</option>
+          <option value="pluto" class="opt">PLUTO</option>
+        </select>
+        <button class="btn" id="calculate" onclick="calculate()">
+          Calculate weight
+        </button>
+      </div>
     </header>
     <main>
-        <div class="container">
-            <div class="block">
-                    <img class="image" id="myImage" width="400px"/>
-                <div class="description" id="desc">
-                    <p>The weight of the object on <span class="planet" id="planet">Earth</span> </p>
-                    <div class="circle"><h4 id="result"></h4></div>
-                </div>
-            </div>
-
+      <div class="container">
+        <div class="block">
+          <img
+            class="image"
+            src="./images/earth.png"
+            id="myImage"
+            width="400px"
+          />
+          <div class="description" id="desc">
+            <p>
+              The weight of the object on
+              <span class="planet" id="planet">Earth</span>
+            </p>
+            <div class="circle"><h4 id="result"></h4></div>
+          </div>
         </div>
-
-
+      </div>
     </main>
     <!-- <script src="script.js"></script> -->
-    <script src="script.js"></script>
-</body>
+    <script src="script1.js"></script>
+  </body>
 </html>
