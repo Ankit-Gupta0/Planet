@@ -22,7 +22,7 @@ html {
 }
 
 body {
-    background: url('/images/galaxy.gif');
+    background: url('./images/galaxy.gif');
     background-size: cover;
     color: #fff;
     font-family: 'Montserrat', sans-serif;
