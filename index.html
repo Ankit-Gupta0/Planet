@@ -24,9 +24,10 @@
           placeholder="Mass in Kilogram"
         />
         <select id="selectedPlanet" ">
+          <option value="none" class="opt">--select-planet--</option>
           <option value="mercury" class="opt">MERCURY</option>
           <option value="venus" class="opt">VENUS</option>
-          <option value="earth" class="opt" selected>EARTH</option>
+          <option value="earth" class="opt">EARTH</option>
           <option value="moon" class="opt">MOON</option>
           <option value="mars" class="opt">MARS</option>
           <option value="jupiter" class="opt">JUPITER</option>
@@ -41,7 +42,7 @@
       </div>
     </header>
     <main>
-      <div class="container">
+      <div class="container data__container">
         <div class="block">
           <img
             class="image"
@@ -49,6 +50,7 @@
             id="myImage"
             width="400px"
           />
+        </div>
           <div class="description" id="desc">
             <p>
               The weight of the object on
@@ -56,10 +58,12 @@
             </p>
             <div class="circle"><h4 id="result"></h4></div>
           </div>
-        </div>
       </div>
     </main>
+    <footer>
+      <p> &#60;&#47;&#62; Crafted with ❣️ by Ankit Gupta</p>
+    </footer>
     <!-- <script src="script.js"></script> -->
-    <script src="script1.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
